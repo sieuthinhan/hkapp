@@ -164,7 +164,7 @@ function App() {
 
             {mathang && (
               <Page9
-                clickmathang={xemmathang}
+                clicktatmathang={xemmathang}
                 clickchaiky1={xemchaiky1}
               />
             )}

@@ -6,7 +6,7 @@ import tieuhaoimg from "../assets/tieuhao.png";
 import hinhtronsanluongimg from "../assets/hinhtronsanluong.png";
 import chuthichsanluongimg from "../assets/chuthichsanluong.png";
 
-function Page9({ clickmathang, clickchaiky1 }) {
+function Page9({ clicktatmathang, clickchaiky1 }) {
     return (
         <div className="page9">
             <div className="page91">
@@ -78,7 +78,7 @@ function Page9({ clickmathang, clickchaiky1 }) {
                 </div>
             </div>
 
-            <div className="page54" onClick={clickmathang}>X</div>
+            <div className="page54" onClick={clicktatmathang}>X</div>
         </div>
     )
 }

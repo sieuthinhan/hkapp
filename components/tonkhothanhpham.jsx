@@ -2,6 +2,17 @@ import chonmathangimg from "../assets/chonmathang.png";
 import sanluongtonkhoimg from "../assets/sanluongtonkho.png";
 
 function Page12({ clicktonkho }) {
+
+    const rawDatatonkho = [
+        ["1/5/2025", "36CVCCM", "1.000", "800", "800"],
+        ["2/5/2025", "34CVCCM", "1.000", "800", "800"],
+        ["3/5/2025", "40 COCM", "1.000", "800", "800"],
+    ];
+
+    const datatonkho = rawDatatonkho.map(([ngay, mathang, sanxuat, nhapkho, xuatkho]) => ({
+            ngay, mathang, sanxuat, nhapkho, xuatkho
+    }));
+
     return(
         <div className="page12">
             <p className="page121">Tồn kho thành phẩm</p>
@@ -12,40 +23,33 @@ function Page12({ clicktonkho }) {
             <p className="page124">Sản lượng</p>
 
             <div className="page52">
-                <div className="page522">
-                    <div className="page5221">Ngày</div>
-                    <div className="page5222">1/5/2025</div>
-                    <div className="page5222">2/5/2025</div>
-                    <div className="page5222">3/5/2025</div>
-                </div>
 
-                <div className="page522">
-                    <div className="page5221">Khách hàng</div>
-                    <div className="page5222">36CVCCM</div>
-                    <div className="page5222">34CVCCM</div>
-                    <div className="page5222">40COCM</div>
-                </div>
+                <table className="page521">
+                    <thead>
+                        <tr>
+                            <th className="page5211">Ngày</th>
+                            <th className="page5221">Mặt hàng</th>
+                            <th className="page5231">Sản xuất</th>
+                            <th className="page5231">Nhập kho</th>
+                            <th className="page5231">Xuất kho</th>
+                        </tr>
+                    </thead>
 
-                <div className="page522">
-                    <div className="page5221">Sản xuất</div>
-                    <div className="page5232">1000</div>
-                    <div className="page5232">1000</div>
-                    <div className="page5232">1000</div>
-                </div>
+                    <tbody>
 
-                <div className="page522">
-                    <div className="page5221">Nhập kho</div>
-                    <div className="page5232">800</div>
-                    <div className="page5232">800</div>
-                    <div className="page5232">800</div>
-                </div>
+                        {datatonkho.map((row) => (
+                            <tr key={row.stt}>
+                                <td>{row.ngay}</td>
+                                <td>{row.mathang}</td>
+                                <td>{row.sanxuat}</td>
+                                <td>{row.nhapkho}</td>
+                                <td>{row.xuatkho}</td>
+                            </tr>
+                        ))}
 
-                <div className="page522">
-                    <div className="page5221">Xuất kho</div>
-                    <div className="page5222">800</div>
-                    <div className="page5222">1000</div>
-                    <div className="page5222">1100</div>
-                </div>
+                    </tbody>
+                </table>
+
             </div>
 
             <div className="page54" onClick={clicktonkho}>X</div>

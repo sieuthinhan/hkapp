@@ -2,7 +2,20 @@ import ngaytheomayimg from "../assets/ngaytheomay.png";
 import sodotheomayimg from "../assets/sodotheomay.png";
 
 function Page13({ clicktheomay }) {
-    return(
+
+    const rawDatatheomay = [
+        ["1", "Chải kỹ 01", "1.000", "1.000", "1.000", "1.000", "4.000"],
+        ["2", "Chải kỹ 02", "1.000", "1.000", "1.000", "1.000", "4.000"],
+        ["3", "Chải kỹ 03", "1.000", "1.000", "1.000", "1.000", "4.000"],
+        ["4", "Chải kỹ 04", "1.000", "1.000", "1.000", "1.000", "4.000"],
+        ["5", "Chải kỹ 05", "1.000", "1.000", "1.000", "1.000", "4.000"],
+    ];
+
+    const datatheomay = rawDatatheomay.map(([stt, tenmay, tc12, tc34, tc56, tc78, tongcong]) => ({
+            stt, tenmay, tc12, tc34, tc56, tc78, tongcong
+    }));
+
+    return (
         <div className="page12">
             <p className="page121">Sản lượng theo máy</p>
 
@@ -10,63 +23,37 @@ function Page13({ clicktheomay }) {
             <img src={sodotheomayimg} alt="sanluongtonkhoimg" className="page132" />
 
             <div className="page52">
-                <div className="page521">
-                    <div className="page5211">STT</div>
-                </div>
 
-                <div className="page523">
-                    <div className="page5231">Tên máy</div>
-                    <div className="page5232">Chải kỹ 01</div>
-                    <div className="page5232">Chải kỹ 02</div>
-                    <div className="page5232">Chải kỹ 03</div>
-                    <div className="page5232">Chải kỹ 04</div>
-                    <div className="page5232">Chải kỹ 06</div>
-                </div>
+                <table className="page521">
+                    <thead>
+                        <tr>
+                            <th className="page5211">STT</th>
+                            <th className="page5221">Tên máy</th>
+                            <th className="page5231">TC12</th>
+                            <th className="page5231">TC34</th>
+                            <th className="page5231">TC56</th>
+                            <th className="page5231">TC78</th>
+                            <th className="page5231">Tổng cộng</th>
+                        </tr>
+                    </thead>
 
-                <div className="page521">
-                    <div className="page5211">TC12</div>
-                    <div className="page5222">1000</div>
-                    <div className="page5222">1000</div>
-                    <div className="page5222">1000</div>
-                    <div className="page5222">1000</div>
-                    <div className="page5222">1000</div>
-                </div>
+                    <tbody>
 
-                <div className="page521">
-                    <div className="page5211">TC34</div>
-                    <div className="page5222">1000</div>
-                    <div className="page5222">1000</div>
-                    <div className="page5222">1000</div>
-                    <div className="page5222">1000</div>
-                    <div className="page5222">1000</div>
-                </div>
+                        {datatheomay.map((row) => (
+                            <tr key={row.stt}>
+                                <td>{row.stt}</td>
+                                <td>{row.tenmay}</td>
+                                <td>{row.tc12}</td>
+                                <td>{row.tc34}</td>
+                                <td>{row.tc56}</td>
+                                <td>{row.tc78}</td>
+                                <td>{row.tongcong}</td>
+                            </tr>
+                        ))}
 
-                <div className="page521">
-                    <div className="page5211">TC56</div>
-                    <div className="page5222">1000</div>
-                    <div className="page5222">1000</div>
-                    <div className="page5222">1000</div>
-                    <div className="page5222">1000</div>
-                    <div className="page5222">1000</div>
-                </div>
+                    </tbody>
+                </table>
 
-                <div className="page521">
-                    <div className="page5211">TC78</div>
-                    <div className="page5222">1000</div>
-                    <div className="page5222">1000</div>
-                    <div className="page5222">1000</div>
-                    <div className="page5222">1000</div>
-                    <div className="page5222">1000</div>
-                </div>
-
-                <div className="page522">
-                    <div className="page5221">Tổng cộng</div>
-                    <div className="page5222">4000</div>
-                    <div className="page5222">4000</div>
-                    <div className="page5222">4000</div>
-                    <div className="page5222">4000</div>
-                    <div className="page5222">4000</div>
-                </div>
             </div>
 
             <div className="page54" onClick={clicktheomay}>X</div>

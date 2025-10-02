@@ -885,41 +885,43 @@
 .page52 {
   width: auto;
   height: auto;
-  opacity: 1;
-  padding: 5px;
-  display: flex;
+  overflow-x: auto;
 }
 
 .page521 {
-  width: auto;
+  width: 100%;
   height: auto;
-  display: flex;
-  flex-direction: column;
+  table-layout: auto;
+  border-collapse: collapse;
+}
+
+.page521 th {
+  background-color: #EAEAEA;
+  font-weight: bolder;
+  font-size: 14px;
+}
+
+.page521 td {
+  text-align: center;
+  padding: 8px ;
+  font-size: 13.5px;
+}
+
+.page521 tr:hover {
+  background-color: #f9f9f9;
 }
 
 .page5211 {
-  background-color: #EAEAEA;
-  color: #000000;
   width: 65px;
   height: 34px;
   opacity: 1;
-  padding: 10px;
-  gap: 10px;
-  display: flex;
-  align-items: center;
   font-size: 14px;
-  font-weight: bolder;
 }
 
 .page5221 {
   width: 200px;
   height: 34px;
-  padding: 10px;
-  background-color: #EAEAEA;
-  display: flex;
-  align-items: center;
   font-size: 14px;
-  font-weight: bolder;
 }
 
 .page5222 {
@@ -953,10 +955,7 @@
   height: 34px;
   padding: 10px;
   background-color: #EAEAEA;
-  display: flex;
-  align-items: center;
   font-size: 14px;
-  font-weight: bolder;
 }
 
 .page5232 {
@@ -1045,19 +1044,11 @@
 .page81 {
   width: 47px;
   height: 26px;
-  position: absolute;
-  top: 300px;
-  right: 235px;
-  opacity: 1;
 }
 
-.page82 {
+.giatri75 {
   width: 47px;
   height: 26px;
-  position: absolute;
-  top: 265px;
-  right: 235px;
-  opacity: 1;
 }
 
 .page83 {
